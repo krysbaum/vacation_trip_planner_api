@@ -6,3 +6,4 @@ json.start_time trip.start_time
 json.end_time trip.end_time
 json.created_at trip.created_at
 json.updated_at trip.updated_at
+json.places trip.places
