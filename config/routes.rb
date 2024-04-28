@@ -13,3 +13,7 @@ Rails.application.routes.draw do
   patch "/trips/:id" => "trips#update"
   delete "/trips/:id" => "trips#destroy"
 end
+
+# TO DO:
+# 1. create routes for places
+# 2. limit by logged in user - non-logged in users should just see a title screen
