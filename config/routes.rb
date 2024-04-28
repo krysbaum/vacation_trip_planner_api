@@ -12,6 +12,13 @@ Rails.application.routes.draw do
   get "/trips/:id" => "trips#show"
   patch "/trips/:id" => "trips#update"
   delete "/trips/:id" => "trips#destroy"
+
+  # places
+  get "/places" => "places#index"
+  post "/places" => "places#create"
+  get "/places/:id" => "places#show"
+  patch "/places/:id" => "places#update"
+  delete "/places/:id" => "places#destroy"
 end
 
 # TO DO:
