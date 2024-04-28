@@ -1,6 +1,9 @@
 class TripsController < ApplicationController
+  # before_action :authenticate_user
+
   def index
     @trips = Trip.all
+    #current_user.trips
     render :index
   end
 
@@ -12,7 +15,11 @@ class TripsController < ApplicationController
       start_time: params[:start_time],
       end_time: params[:end_time],
     )
-    render :show
+    if @trip.valid?
+      render :show
+    else
+      render json: { errors: @trip.errors.full_messages }, status: 422
+    end
   end
 
   def show
