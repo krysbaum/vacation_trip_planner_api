@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trip_id: 1
+  address: MyString
+  name: MyString
+  description: MyText
+  image_url: MyString
+  start_time: 2024-04-28 07:56:00
+  end_time: 2024-04-28 07:56:00
+
+two:
+  trip_id: 1
+  address: MyString
+  name: MyString
+  description: MyText
+  image_url: MyString
+  start_time: 2024-04-28 07:56:00
+  end_time: 2024-04-28 07:56:00
