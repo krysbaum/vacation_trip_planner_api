@@ -19,8 +19,11 @@ Rails.application.routes.draw do
   get "/places/:id" => "places#show"
   patch "/places/:id" => "places#update"
   delete "/places/:id" => "places#destroy"
+
+  # gemini
+  post "/plan" => "gemini#index"
 end
 
 # TO DO:
-# 1. create routes for places
-# 2. limit by logged in user - non-logged in users should just see a title screen
+# 1. Authentication Front-end: add ability to log in and out
+# 2. Authentication Back-end: limit by logged in user - non-logged in users should just see a title screen

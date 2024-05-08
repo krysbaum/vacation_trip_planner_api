@@ -2,14 +2,13 @@ class TripsController < ApplicationController
   # before_action :authenticate_user
 
   def index
-    @trips = Trip.all
-    #current_user.trips
+    @trips = current_user.trips
     render :index
   end
 
   def create
     @trip = Trip.create(
-      user_id: params[:user_id],
+      user_id: current_user.id,
       title: params[:title],
       image_url: params[:image_url],
       start_time: params[:start_time],
@@ -23,7 +22,7 @@ class TripsController < ApplicationController
   end
 
   def show
-    @trip = Trip.find_by(id: params[:id])
+    @trip = current_user.trip.find_by(id: params[:id])
     render :show
   end
 
