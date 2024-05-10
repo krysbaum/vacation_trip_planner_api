@@ -23,7 +23,3 @@ Rails.application.routes.draw do
   # gemini
   post "/plan" => "gemini#index"
 end
-
-# TO DO:
-# 1. Authentication Front-end: add ability to log in and out
-# 2. Authentication Back-end: limit by logged in user - non-logged in users should just see a title screen
