@@ -16,6 +16,7 @@ class GeminiController < ApplicationController
                    .post("https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=#{ENV["GEMINI_API_KEY"]}",
                          body: request_body)
     data = response.parse
+    console.log(data)
     json_string = data["candidates"][0]["content"]["parts"][0]["text"].delete_prefix("```json").delete_suffix("```")
     render json: JSON.parse(json_string)
   end
